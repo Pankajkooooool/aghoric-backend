@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Client Extension</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Decentralised Gig Worker</h1>
+    <form id="gigForm">
+      <input type="text" id="title" placeholder="Title for your Project" required>
+      <textarea id="description" placeholder="A brief description about it" required></textarea>
+      <input type="number" id="price" placeholder="Price in Any dollar or any currency" required>
+      <input type="text" id="category" placeholder="Category" required>
+      <select 
+      id="cryptoType" 
+      style="padding: 8px 0;"
+      required 
+      class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <option value="" disabled selected>Select Cryptocurrency</option>
+      <option value="BTC">Bitcoin </option>
+      <option value="ETH">Ethereum</option>
+      <option value="USDT">Tether</option>
+    </select>
+      <input type="date" id="time" >
+      <input type="file" placeholder="Add Some Reference Images" id="image" accept="image/*" >
+      <button type="submit">Submit Gig</button>
+    </form>
+
+    <div id="projectsList">
+      <h2>Your Projects</h2>
+      <ul id="projects"></ul>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

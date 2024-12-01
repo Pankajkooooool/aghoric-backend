@@ -1,0 +1,10 @@
+docker run -d \
+  --name gigmarket_postgres \
+  -e POSTGRES_DB=gigmarket \
+  -e POSTGRES_USER=giguser \
+  -e POSTGRES_PASSWORD=gigpassword \
+  -p 5434:5434 \
+  -v postgres_data:/var/lib/postgresql/data \
+  postgres:13
+
+docker run --name gigmarket   -e POSTGRES_DB=gigmarket   -e POSTGRES_USER=giguser   -e POSTGRES_PASSWORD=password   -p 5434:5434   -v postgres_data:/var/lib/postgresql/data   -d postgres
